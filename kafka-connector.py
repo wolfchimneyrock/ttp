@@ -1,9 +1,19 @@
 #!/usr/bin/env python
 
-import sys, requests, yaml, atexit, cStringIO, time, io, os
+import sys, requests, yaml, atexit, time, io, os
 import xml.etree.cElementTree as ET
 import avro.schema
 from avro.io import DatumWriter
+
+try:
+    avro_parser = avro.schema.parse
+except AttributeError:
+    avro_parser = avro.schema.Parse
+
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 from optparse import OptionParser
 from confluent_kafka import Producer
@@ -20,6 +30,7 @@ def producer_callback(eventid):
         if err:
             sys.stderr.write("%% Message failed delivery: %s\n" % msg)
         else:
+            sys.stderr.write("Message delivered.")
             update_last_offset(eventid)
         
     return inner_callback
@@ -36,8 +47,8 @@ if __name__ == '__main__':
         config = yaml.load(cf)
         cf.close()
     except yaml.YAMLError as exc:
-        print exc
-        print "Error loading configuration file.  Aborting."
+        print (exc)
+        print ("Error loading configuration file.  Aborting.")
         sys.exit()
     try:
         _last_offset = int(open(filename).read())
@@ -46,7 +57,7 @@ if __name__ == '__main__':
 
     @atexit.register
     def save_last_offset():
-        print "saving last offset..."
+        print ("saving last offset...")
         open(filename, "w").write("%d" % _last_offset)
     
     username = None
@@ -60,12 +71,12 @@ if __name__ == '__main__':
                 username = config["Auth"]["Username"]
                 password = config["Auth"]["Password"]
             else:
-                print "Auth source '{}' not supported".format(config["Auth"]["Source"])
+                print ("Auth source '{}' not supported".format(config["Auth"]["Source"]))
         else:
-            print "Missing Auth"
+            print ("Missing Auth")
 
     except KeyError:
-        print "Invalid Auth information"
+        print ("Invalid Auth information")
     
     if 'Interval' in config:
         interval = config['Interval']
@@ -79,39 +90,53 @@ if __name__ == '__main__':
        
     if 'Schema' in config:
         schema_path = config['Schema']
-        schema = avro.schema.parse(open(schema_path).read())
+        schema = avro_parser(open(schema_path).read())
         writer = avro.io.DatumWriter(schema)
     else:
-        print "failed to get schema file from configuration"
+        print ("failed to get schema file from configuration")
         sys.exit()
     
     if 'Broker' in config:
         broker = config['Broker']
     else:
-        print "Must specify Broker in configuration"
+        print ("Must specify Broker in configuration")
         sys.exit()
+    
+    if 'Topic' in config:
+        topic = config['Topic']
+    else:
+        print ("Must specify Topic in configuration")
+        sys.exit()
+
 
     if 'URL' in config:
         url = config['URL']
     else:
-        print "Must specify API URL in configuration"
+        print ("Must specify API URL in configuration")
         sys.exit()
+
+    limit = 1000
+
+    print ("Connecting to Kafka...")
     producer_conf={'bootstrap.servers': broker}
     p = Producer(**producer_conf)
     @atexit.register
     def flush_producer():
-        print "Waiting for messages to send..."
+        print ("Waiting for messages to send...")
         p.flush()
-
+    running = True
     with requests.Session() as s:
         if (username is not None) and (password is not None):
             s.auth = (username, password)
-        while True:
+        while running:
             try:
                 params['startid'] = _last_offset
-                r = s.get(url, params=params)
+                print ("Sending request...")
+                #r = s.get(url, params=params)
+                r = open("test.xml", "r").read()
+                running = False
                 this_count = 0
-                with cStringIO.StringIO(r.text) as response_text:
+                with StringIO(r) as response_text:
                     for event, elem in ET.iterparse(response_text, events=("start", "end")):
                         if event == "start":
                             if elem.tag == "events":
@@ -128,20 +153,18 @@ if __name__ == '__main__':
                                 this_timestamp = elem.text
                             elif elem.tag == "deviceid":
                                 this_deviceid = int(elem.text)
-                            elif elem.tag == "event":
+                            elif elem.tag == "event" and this_id > _last_offset:
                                 # write values to kafka
                                 try:
-                                    me = MovementEvent.from_api(config, this_value, this_timestamp, this_deviceid)
-
+                                    me = MovementEvent.from_api(config, this_id, this_value, this_timestamp, this_deviceid)
                                     p.produce(topic, me.to_kafka(writer), 
-                                              partition=me.partition(), 
-                                              timestamp=me.timestamp(),
+                                            #  partition=me.partition, 
+                                            #  timestamp=me.timestamp,
                                               callback=producer_callback(this_id))
                                 except BufferError as exc:
                                     sys.stderr.write("%% Local producer queue is full.\n")
 
                                 p.poll(0)
-                                
                             # we want to clear items when we finish with them to limit memory usage
                             elem.clear()
                 save_last_offset()

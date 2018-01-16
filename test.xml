@@ -1,0 +1,1104 @@
+<result errorcode="0">
+<events count="100" lastEventId="120533813">
+<event>
+<eventid>118578112</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>TQS719, AUS, 82%</eventvalue>
+<eventtime>2017-12-24 04:50:12.835</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578114</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>QS719, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:50:13.637</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578137</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CII57, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:50:18.438</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578140</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CH57GO, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:50:18.836</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578211</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>YDC00D, AUS, 87%</eventvalue>
+<eventtime>2017-12-24 04:50:43.233</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578228</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>SEW934, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:50:48.033</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578235</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>318VQU, AUS, 84%</eventvalue>
+<eventtime>2017-12-24 04:50:52.232</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578267</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>YCT38X, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:51:03.033</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578336</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>AZ87SY, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:51:25.433</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578427</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DAY83B, AUS, 81%</eventvalue>
+<eventtime>2017-12-24 04:52:15.972</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578443</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DAY83B, AUS, 91%</eventvalue>
+<eventtime>2017-12-24 04:52:21.172</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578459</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BPA32J, AUS, 91%</eventvalue>
+<eventtime>2017-12-24 04:52:24.729</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578460</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CZK64E, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:52:24.872</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578464</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CZK64E, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:52:29.973</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578499</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DNQ91, AUS, 87%</eventvalue>
+<eventtime>2017-12-24 04:52:48.343</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578505</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DNQ91R, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:52:50.138</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578511</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CH08HU, AUS, 77%</eventvalue>
+<eventtime>2017-12-24 04:52:51.130</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578549</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>XYR052, AUS, 75%</eventvalue>
+<eventtime>2017-12-24 04:53:00.876</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578548</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DHT440, AUS, 84%</eventvalue>
+<eventtime>2017-12-24 04:53:02.127</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578550</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DHT44Q, AUS, 84%</eventvalue>
+<eventtime>2017-12-24 04:53:02.228</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578566</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DMQ23N, AUS, 87%</eventvalue>
+<eventtime>2017-12-24 04:53:08.530</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578574</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BAY56L, AUS, 91%</eventvalue>
+<eventtime>2017-12-24 04:53:11.161</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>5</deviceid>
+<devicedescription>LPR Entry Left</devicedescription>
+</event>
+<event>
+<eventid>118578585</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DMQ32E, AUS, 90%</eventvalue>
+<eventtime>2017-12-24 04:53:13.437</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578583</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DCE61M, AUS, 92%</eventvalue>
+<eventtime>2017-12-24 04:53:14.629</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578586</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CB94MN, AUS, 81%</eventvalue>
+<eventtime>2017-12-24 04:53:16.071</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578605</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BR06JH, AUS, 80%</eventvalue>
+<eventtime>2017-12-24 04:53:23.037</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578611</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BZI42J, AUS, 81%</eventvalue>
+<eventtime>2017-12-24 04:53:26.470</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578612</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BZI42, AUS, 82%</eventvalue>
+<eventtime>2017-12-24 04:53:26.870</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578615</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BY38VQ, AUS, 79%</eventvalue>
+<eventtime>2017-12-24 04:53:29.642</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578623</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BZI42J, AUS, 80%</eventvalue>
+<eventtime>2017-12-24 04:53:32.771</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578624</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BY38VQ, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:53:35.142</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578633</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>III11, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:53:37.839</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578635</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BV08NP, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:53:38.744</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578632</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BZI42J, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:53:38.770</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578638</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BV08NP, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:53:43.837</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578639</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BZI42J, AUS, 92%</eventvalue>
+<eventtime>2017-12-24 04:53:44.471</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578661</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CYK92Q, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:53:49.828</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578668</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>II111, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:53:51.271</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578671</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CGK56G, AUS, 81%</eventvalue>
+<eventtime>2017-12-24 04:53:52.071</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578672</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BV08NP, AUS, 91%</eventvalue>
+<eventtime>2017-12-24 04:53:53.739</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578681</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BV08NP, AUS, 87%</eventvalue>
+<eventtime>2017-12-24 04:53:59.138</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578696</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BV08NP, AUS, 90%</eventvalue>
+<eventtime>2017-12-24 04:54:07.537</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578705</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CEY34H, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:54:09.573</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578708</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BV08NP, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:54:12.636</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578717</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BP95BE, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:54:18.141</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578723</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CEY34H, AUS, 90%</eventvalue>
+<eventtime>2017-12-24 04:54:20.674</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578737</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BFK54Y, AUS, 90%</eventvalue>
+<eventtime>2017-12-24 04:54:25.940</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578754</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DPR55E, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:54:37.039</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578786</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BY43CI, AUS, 81%</eventvalue>
+<eventtime>2017-12-24 04:54:52.826</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578799</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DCB58C, AUS, 88%</eventvalue>
+<eventtime>2017-12-24 04:54:57.825</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578803</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>1GJW655, AUS, 93%</eventvalue>
+<eventtime>2017-12-24 04:55:05.327</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578830</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CQB64H, AUS, 86%</eventvalue>
+<eventtime>2017-12-24 04:55:14.367</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578841</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CTN9801, AUS, 81%</eventvalue>
+<eventtime>2017-12-24 04:55:19.231</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578842</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>732WYI, AUS, 88%</eventvalue>
+<eventtime>2017-12-24 04:55:21.658</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>5</deviceid>
+<devicedescription>LPR Entry Left</devicedescription>
+</event>
+<event>
+<eventid>118578847</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>RWF19, AUS, 79%</eventvalue>
+<eventtime>2017-12-24 04:55:21.768</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578862</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CZH95C, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:55:25.223</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578871</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>AMM27P, AUS, 84%</eventvalue>
+<eventtime>2017-12-24 04:55:33.325</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578872</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DFB58T, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:55:34.136</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578889</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>AZO92X, AUS, 76%</eventvalue>
+<eventtime>2017-12-24 04:55:40.222</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578888</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DFB58T, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:55:40.237</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578902</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DDT88J, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:55:45.968</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578934</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>AZ61BL, AUS, 88%</eventvalue>
+<eventtime>2017-12-24 04:55:58.423</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578944</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DKX50K, AUS, 86%</eventvalue>
+<eventtime>2017-12-24 04:55:59.636</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118578965</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>3584, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:56:05.320</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578966</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>SV3584, AUS, 92%</eventvalue>
+<eventtime>2017-12-24 04:56:05.720</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578967</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>SSV3584, AUS, 76%</eventvalue>
+<eventtime>2017-12-24 04:56:05.821</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578980</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BS98SQ, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:56:12.664</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118578993</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CO09CM, AUS, 80%</eventvalue>
+<eventtime>2017-12-24 04:56:14.924</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118578994</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CO09CH, AUS, 86%</eventvalue>
+<eventtime>2017-12-24 04:56:15.023</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579000</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BS28GX, AUS, 83%</eventvalue>
+<eventtime>2017-12-24 04:56:22.437</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579006</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>125SLO, AUS, 86%</eventvalue>
+<eventtime>2017-12-24 04:56:24.122</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579021</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BS28GX, AUS, 80%</eventvalue>
+<eventtime>2017-12-24 04:56:30.735</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579022</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DAJ72V, AUS, 93%</eventvalue>
+<eventtime>2017-12-24 04:56:31.522</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579030</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>PB761, AUS, 77%</eventvalue>
+<eventtime>2017-12-24 04:56:35.766</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579063</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BZW77A, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:56:44.668</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579064</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CXB68H, AUS, 78%</eventvalue>
+<eventtime>2017-12-24 04:56:45.422</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579087</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BZ60UZ, AUS, 79%</eventvalue>
+<eventtime>2017-12-24 04:56:55.265</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579091</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CD08BF, AUS, 80%</eventvalue>
+<eventtime>2017-12-24 04:56:57.828</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579096</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CB04SS, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:56:59.022</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579109</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CQV305, AUS, 77%</eventvalue>
+<eventtime>2017-12-24 04:57:04.664</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579121</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DCO58R, AUS, 81%</eventvalue>
+<eventtime>2017-12-24 04:57:10.420</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579122</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BLK05W, AUS, 89%</eventvalue>
+<eventtime>2017-12-24 04:57:10.534</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579135</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BLK05W, AUS, 93%</eventvalue>
+<eventtime>2017-12-24 04:57:16.134</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579137</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>COV305, AUS, 77%</eventvalue>
+<eventtime>2017-12-24 04:57:16.965</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579139</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CQV305, AUS, 75%</eventvalue>
+<eventtime>2017-12-24 04:57:17.265</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579173</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DPF941, AUS, 75%</eventvalue>
+<eventtime>2017-12-24 04:57:27.531</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579174</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DPF94T, AUS, 92%</eventvalue>
+<eventtime>2017-12-24 04:57:27.944</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579207</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>YGY151, AUS, 76%</eventvalue>
+<eventtime>2017-12-24 04:57:37.722</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579208</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>YGY15M, AUS, 93%</eventvalue>
+<eventtime>2017-12-24 04:57:38.719</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579221</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>DAS40K, AUS, 92%</eventvalue>
+<eventtime>2017-12-24 04:57:43.063</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579223</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BI33JB, AUS, 77%</eventvalue>
+<eventtime>2017-12-24 04:57:44.720</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579225</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>AA81VZ, AUS, 85%</eventvalue>
+<eventtime>2017-12-24 04:57:45.732</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579249</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BC40WD, AUS, 77%</eventvalue>
+<eventtime>2017-12-24 04:57:53.119</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579252</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CJR34R, AUS, 80%</eventvalue>
+<eventtime>2017-12-24 04:57:53.163</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579263</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>IBC40, AUS, 76%</eventvalue>
+<eventtime>2017-12-24 04:57:58.318</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>2</deviceid>
+<devicedescription>LPR Entry Right</devicedescription>
+</event>
+<event>
+<eventid>118579281</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BJ61, AUS, 76%</eventvalue>
+<eventtime>2017-12-24 04:58:01.763</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579282</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BJ61YL, AUS, 88%</eventvalue>
+<eventtime>2017-12-24 04:58:01.963</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+<event>
+<eventid>118579285</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CXS68T, AUS, 86%</eventvalue>
+<eventtime>2017-12-24 04:58:02.829</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579286</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>CXS681, AUS, 76%</eventvalue>
+<eventtime>2017-12-24 04:58:03.029</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>3</deviceid>
+<devicedescription>LPR Exit Left</devicedescription>
+</event>
+<event>
+<eventid>118579284</eventid>
+<eventtype>18</eventtype>
+<eventdescription>CarRLicensePlateFound</eventdescription>
+<eventvalue>BJ61YI, AUS, 84%</eventvalue>
+<eventtime>2017-12-24 04:58:03.262</eventtime>
+<serverid>5952388306601061575</serverid>
+<serverdescription>Diva1407782737</serverdescription>
+<deviceid>4</deviceid>
+<devicedescription>LPR Exit Right</devicedescription>
+</event>
+</events>
+</result>
