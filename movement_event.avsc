@@ -1,0 +1,142 @@
+{
+"namespace": "com.parkassist.sdp.events.movement",
+"type": "record",
+"name": "MovementEvent",
+"doc": "Represents an event that records movement of vehicles either entering a site, exiting a site, or within a site. These events are generally captured by cameras. Movement within a site can include movement within a zone or region, or into or out of zones or regions.",
+"fields": 
+[
+{
+"name": "id",
+"type": "long",
+"doc": "The main immutable unique identifier for the event."
+},
+{
+"name": "timestamp",
+"type": "long",
+"logicalType": "timestamp-millis",
+"doc": "The instant at which the event occurred, as the number of milliseconds from the UNIX epoch, 1 January 1970 00:00:00.000 UTC."
+},
+{
+"name": "site_id",
+"type": "int",
+"doc": "The main immutable unique identifier for the Site, as defined by Internal Tools."
+},
+{
+"name": "camera",
+"type": 
+{
+"type": "record",
+"name": "Camera",
+"fields": 
+[
+{
+"name": "id",
+"type": "int",
+"doc": "The main immutable unique identifier for the camera, as determined by Park Assist. (This is independent of any internal identifier the camera or its vendor may use for the camera.)"
+},
+{
+"name": "latitude",
+"type": "double",
+"doc": "The latitude of the camera. It’s redundant to include this here, as it’s really a attribute of the camera, rather than the event — similar to the camera’s “name”. We’re including this right here in the event, along with longitude, because it just seems extremely useful and relevant to any and all analyses of these events. Including this data here, even though it’s duplicative and inefficient in technical terms, will hopefully increase the efficiency of the people who will work with these events."
+},
+{
+"name": "longitude",
+"type": "double",
+"doc": "The longitude of the camera. It’s redundant to include this here, as it’s really a attribute of the camera, rather than the event — similar to the camera’s “name”. We’re including this right here in the event, along with latitude, because it just seems extremely useful and relevant to any and all analyses of these events. Including this data here, even though it’s duplicative and inefficient in technical terms, will hopefully increase the efficiency of the people who will work with these events."
+},
+{
+"name": "lpr_image_path",
+"type": 
+[
+"string",
+"null"
+],
+"default": null,
+"doc": "The filesystem path to the highly-cropped LPR image within the camera’s local filesystem. This is included just in case it’s useful for debugging. Some cameras don’t provide this information so this is null by default."
+},
+{
+"name": "overview_image_path",
+"type": 
+[
+"string",
+"null"
+],
+"default": null,
+"doc": "The filesystem path to the full-frame image within the camera’s local filesystem. This is included just in case it’s useful for debugging. Some cameras don’t provide this information so this is null by default. Some cameras only provide a partial path, with the “base path” being out-of-band."
+}
+]
+}
+},
+{
+"name": "movement_type",
+"doc": "The type of movement. ‘entry’ and ‘exit’ are probably pretty clear. ‘within’ indicates that the camera that recorded the movement is located _within_ the location specified by `location_type` and the associated `_id` field. In other words, it’s not a transition between spaces but simply a change of position within a space.",
+"type": 
+{
+"name": "MovementEventTypeEnum",
+"type": "enum",
+"symbols": 
+[
+"entry",
+"exit",
+"within"
+]
+}
+},
+{
+"name": "location_type",
+"doc": "The type of location associated with the movement. For each valid symbol there is a corresponding root-level field in this record schema with the suffix `_id` that conveys the unique identifier for the _specific_ location associated with the movement. In a sense, the value of _this_ field tells you which _other_ field to check to find the identifier of the _actual_ location associated with the movement.",
+"type": 
+{
+"name": "LocationTypeEnum",
+"type": "enum",
+"symbols": 
+[
+"lane",
+"region",
+"site",
+"zone"
+]
+}
+},
+{
+"name": "plate_text",
+"type": "string",
+"doc": "The text that the camera read from the license plate of the subject vehicle."
+},
+{
+"name": "plate_confidence",
+"type": "string",
+"doc": "The confidence in the accuracy of `plate_text`. Provided by the camera."
+},
+{
+"name": "lane_id",
+"type": 
+[
+"int",
+"null"
+],
+"default": null,
+"doc": "The main immutable unique identifier for the lane as assigned by Park Server. Must have a value if `location_type` is `lane`."
+},
+{
+"name": "region_id",
+"type": 
+[
+"int",
+"null"
+],
+"default": null,
+"doc": "The main immutable unique identifier for the region as assigned by Park Server. Must have a value if `location_type` is `region`."
+},
+{
+"name": "zone_id",
+"type": 
+[
+"int",
+"null"
+],
+"default": null,
+"doc": "The main immutable unique identifier for the zone as assigned by Park Server. Must have a value if `location_type` is `zone`. May have a value if the `location_type` is `lane` as many of our lanes are within zones."
+}
+]
+}

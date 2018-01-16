@@ -1,0 +1,23 @@
+Broker:     "192.168.1.30"
+URL:        "http://10.34.7.11/command"
+Auth:
+    Type:       "Basic" 
+    Source:     "Environment"
+    Username:   "VDG_API_USERNAME"
+    Password:   "VDG_API_PASSWORD"
+Params:
+    command: "getEvents"
+    types:   "CarRLicensePlateFound"
+    startid: 0
+    limit:   1000
+
+Interval:    60.0
+
+Schema: "movement_event.avsc"
+
+Fields:
+    locationtype: "site"
+    siteid: 68
+    latitude: "100"
+    longitude: "100"
+
