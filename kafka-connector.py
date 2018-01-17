@@ -21,7 +21,8 @@ from events import MovementEvent
 
 def update_last_offset(n):
     global _last_offset
-    _last_offset = n
+    if n > _last_offset:
+        _last_offset = n
 
 
 def producer_callback(eventid):
@@ -30,7 +31,6 @@ def producer_callback(eventid):
         if err:
             sys.stderr.write("%% Message failed delivery: %s\n" % msg)
         else:
-            sys.stderr.write("Message delivered.")
             update_last_offset(eventid)
         
     return inner_callback
@@ -81,13 +81,16 @@ if __name__ == '__main__':
     if 'Interval' in config:
         interval = config['Interval']
     else:
-        interval = 15.0
+        interval = 5.0
         
     if 'Params' in config:
         params = config['Params']
     else:
         params = {'limit': 1000}
-       
+      
+    if 'limit' in params:
+        limit = params['limit']
+ 
     if 'Schema' in config:
         schema_path = config['Schema']
         schema = avro_parser(open(schema_path).read())
@@ -115,8 +118,6 @@ if __name__ == '__main__':
         print ("Must specify API URL in configuration")
         sys.exit()
 
-    limit = 1000
-
     print ("Connecting to Kafka...")
     producer_conf={'bootstrap.servers': broker}
     p = Producer(**producer_conf)
@@ -132,11 +133,14 @@ if __name__ == '__main__':
             try:
                 params['startid'] = _last_offset
                 print ("Sending request...")
-                #r = s.get(url, params=params)
-                r = open("test.xml", "r").read()
-                running = False
+                print (params)
+                r = s.get(url, params=params)
+                print (r.text)
+
+                #r = open("test.xml", "r").read()
+                #running = False
                 this_count = 0
-                with StringIO(r) as response_text:
+                with StringIO(r.text) as response_text:
                     for event, elem in ET.iterparse(response_text, events=("start", "end")):
                         if event == "start":
                             if elem.tag == "events":
@@ -161,6 +165,7 @@ if __name__ == '__main__':
                                             #  partition=me.partition, 
                                             #  timestamp=me.timestamp,
                                               callback=producer_callback(this_id))
+                                    update_last_offset(this_id)
                                 except BufferError as exc:
                                     sys.stderr.write("%% Local producer queue is full.\n")
 
@@ -168,10 +173,11 @@ if __name__ == '__main__':
                             # we want to clear items when we finish with them to limit memory usage
                             elem.clear()
                 save_last_offset()
+	        print ("processed {} records.".format(this_count))
                 if this_count < limit:
                     # we didn't hit the limit, which implies there is no more available now - sleep the interval
+                    print ("sleeping interval...")
                     time.sleep(interval)
-
             except KeyboardInterrupt:
                 sys.exit()
                 

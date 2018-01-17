@@ -10,9 +10,9 @@ Params:
     command: "getEvents"
     types:   "CarRLicensePlateFound"
     startid: 0
-    limit:   1000
+    limit:   10000
 
-Interval:    60.0
+Interval:    5.0
 
 Schema: "movement_event.avsc"
 
