@@ -50,16 +50,6 @@ if __name__ == '__main__':
         print (exc)
         print ("Error loading configuration file.  Aborting.")
         sys.exit()
-    try:
-        _last_offset = int(open(filename).read())
-    except IOError:
-        _last_offset = 1
-
-    @atexit.register
-    def save_last_offset():
-        print ("saving last offset...")
-        open(filename, "w").write("%d" % _last_offset)
-    
     username = None
     password = None
     authorizer = None
@@ -67,19 +57,36 @@ if __name__ == '__main__':
         if 'Auth' in config:
             if 'Source' in config['Auth']:
                 if config["Auth"]["Source"] == "Environment":
-                    username = os.getenv(config["Auth"]["Username"])
-                    password = os.getenv(config["Auth"]["Password"])
+                    try:
+                        username = os.environ[config["Auth"]["Username"]]
+                        password = os.environ[config["Auth"]["Password"]]
+                    except KeyError:
+                        print("could not get username / password from environment.  Aborting.")
+                        sys.exit()
                 elif config["Auth"]["Source"] == "Literal":
                     username = config["Auth"]["Username"]
                     password = config["Auth"]["Password"]
+                elif config["Auth"]["Source"] == "File":
+                    try:
+                        username = open(config["Auth"]["Username"]).read()
+                        password = open(config["Auth"]["Password"]).read()
+                    except IOError:
+                        print ("Could not open username / password files.  Aborting.")
+                        sys.exit()
                 else:
                     print ("Auth source '{}' not supported.".format(config["Auth"]["Source"]))
             if 'Type' in config['Auth']:
                 if config["Auth"]["Type"] == "Basic":
                     authorizer = requests.auth.HTTPBasicAuth(username, password)
+                elif config["Auth"]["Type"] == "Digest":
+                    authorizer = requests.auth.HTTPDigestAuth(username, password)
+                elif config["Auth"]["Type"] == "Proxy":
+                    authorizer = requests.auth.HTTPProxyAuth(username, password)
                 else:
                     print ("Auth type '{}' not supported.".format(config["Auth"]["Type"]))
-                    
+            else:
+                print("Auth type not specified, assuming HTTPBasicAuth.")
+                authorizer = requests.auth.HTTPBasicAuth(username, password)
         else:
             print ("Missing Auth")
 
@@ -130,6 +137,17 @@ if __name__ == '__main__':
         timeout = config['Timeout']
     else:
         timeout = 5
+    
+    try:
+        _last_offset = int(open(filename).read())
+    except IOError:
+        _last_offset = 1
+
+    @atexit.register
+    def save_last_offset():
+        print ("saving last offset...")
+        open(filename, "w").write("%d" % _last_offset)
+    
 
     print ("Connecting to Kafka...")
     producer_conf={'bootstrap.servers': broker}
@@ -187,7 +205,9 @@ if __name__ == '__main__':
                                         break
                                     except BufferError as exc:
                                         sys.stderr.write("%% Local producer queue is full.  flushing then retrying.\n")
-                                        p.flush()
+                                        if p.flush() > 0:
+                                            print("Flush failed.  Aborting.")
+                                            sys.exit()
                                         continue
                                     except KafkaException as exc:
                                         sys.stderr.write("%% KafkaException: %s\n", exc)
