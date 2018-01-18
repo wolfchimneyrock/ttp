@@ -4,7 +4,7 @@ import sys, requests, yaml, atexit, time, io, os
 import xml.etree.cElementTree as ET
 import avro.schema
 from avro.io import DatumWriter
-
+from requests.exceptions import HTTPError, ConnectionError, Timeout
 try:
     avro_parser = avro.schema.parse
 except AttributeError:
@@ -62,16 +62,24 @@ if __name__ == '__main__':
     
     username = None
     password = None
+    authorizer = None
     try:
-        if 'Auth' in config and 'Source' in config['Auth']:
-            if config["Auth"]["Source"] == "Environment":
-                username = os.getenv(config["Auth"]["Username"])
-                password = os.getenv(config["Auth"]["Password"])
-            elif config["Auth"]["Source"] == "Literal":
-                username = config["Auth"]["Username"]
-                password = config["Auth"]["Password"]
-            else:
-                print ("Auth source '{}' not supported".format(config["Auth"]["Source"]))
+        if 'Auth' in config:
+            if 'Source' in config['Auth']:
+                if config["Auth"]["Source"] == "Environment":
+                    username = os.getenv(config["Auth"]["Username"])
+                    password = os.getenv(config["Auth"]["Password"])
+                elif config["Auth"]["Source"] == "Literal":
+                    username = config["Auth"]["Username"]
+                    password = config["Auth"]["Password"]
+                else:
+                    print ("Auth source '{}' not supported.".format(config["Auth"]["Source"]))
+            if 'Type' in config['Auth']:
+                if config["Auth"]["Type"] == "Basic":
+                    authorizer = requests.auth.HTTPBasicAuth(username, password)
+                else:
+                    print ("Auth type '{}' not supported.".format(config["Auth"]["Type"]))
+                    
         else:
             print ("Missing Auth")
 
@@ -118,27 +126,36 @@ if __name__ == '__main__':
         print ("Must specify API URL in configuration")
         sys.exit()
 
+    if 'Timeout' in config:
+        timeout = config['Timeout']
+    else:
+        timeout = 5
+
     print ("Connecting to Kafka...")
     producer_conf={'bootstrap.servers': broker}
     p = Producer(**producer_conf)
+
     @atexit.register
     def flush_producer():
         print ("Waiting for messages to send...")
         p.flush()
     running = True
     with requests.Session() as s:
-        if (username is not None) and (password is not None):
-            s.auth = (username, password)
+        if authorizer is not None:
+            s.auth = authorizer
         while running:
             try:
                 params['startid'] = _last_offset
-                print ("Sending request...")
-                print (params)
-                r = s.get(url, params=params)
-                print (r.text)
-
-                #r = open("test.xml", "r").read()
-                #running = False
+                print ("Sending request to camera server...")
+                try:
+                    r = s.get(url, params=params, timeout=timeout)
+                    r.raise_for_status()
+                except (ConnectionError, Timeout, HTTPError) as exc:
+                    print("%% camera request timeout or HTTP error: {}".format(exc))
+                    print("sleeping for {} seconds...".format(interval))
+                    time.sleep(interval)
+                    continue
+                
                 this_count = 0
                 with StringIO(r.text) as response_text:
                     for event, elem in ET.iterparse(response_text, events=("start", "end")):
@@ -158,16 +175,26 @@ if __name__ == '__main__':
                             elif elem.tag == "deviceid":
                                 this_deviceid = int(elem.text)
                             elif elem.tag == "event" and this_id > _last_offset:
+                                me = MovementEvent.from_api(config, this_id, this_value, this_timestamp, this_deviceid)
                                 # write values to kafka
-                                try:
-                                    me = MovementEvent.from_api(config, this_id, this_value, this_timestamp, this_deviceid)
-                                    p.produce(topic, me.to_kafka(writer), 
-                                            #  partition=me.partition, 
-                                            #  timestamp=me.timestamp,
-                                              callback=producer_callback(this_id))
-                                    update_last_offset(this_id)
-                                except BufferError as exc:
-                                    sys.stderr.write("%% Local producer queue is full.\n")
+                                while (True):
+                                    try:
+                                        p.produce(topic, me.to_kafka(writer), 
+                                                #  partition=me.partition, 
+                                                #  timestamp=me.timestamp,
+                                                  callback=producer_callback(this_id))
+                                        update_last_offset(this_id)
+                                        break
+                                    except BufferError as exc:
+                                        sys.stderr.write("%% Local producer queue is full.  flushing then retrying.\n")
+                                        p.flush()
+                                        continue
+                                    except KafkaException as exc:
+                                        sys.stderr.write("%% KafkaException: %s\n", exc)
+                                        break
+                                    except NotImplementedError:
+                                        print ("librdkafka version does not support timestamps.  Please upgrade.")
+                                        sys.exit()
 
                                 p.poll(0)
                             # we want to clear items when we finish with them to limit memory usage
@@ -176,7 +203,7 @@ if __name__ == '__main__':
 	        print ("processed {} records.".format(this_count))
                 if this_count < limit:
                     # we didn't hit the limit, which implies there is no more available now - sleep the interval
-                    print ("sleeping interval...")
+                    print ("sleeping {} seconds...".format(interval))
                     time.sleep(interval)
             except KeyboardInterrupt:
                 sys.exit()
