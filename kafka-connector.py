@@ -165,6 +165,7 @@ if __name__ == '__main__':
         print ("Waiting for messages to send...")
         p.flush()
     running = True
+    last_seen = {}
     with requests.Session() as s:
         if authorizer is not None:
             s.auth = authorizer
@@ -201,8 +202,21 @@ if __name__ == '__main__':
                                 this_deviceid = int(elem.text)
                             elif elem.tag == "event" and this_id > _last_offset:
                                 me = MovementEvent.from_api(config, this_id, this_value, this_timestamp, this_deviceid)
+                                
+                                produce_this = False
+                                if this_deviceid not in last_seen:
+                                    # this camera has never before seen a plate
+                                    last_seen[this_deviceid] = me.plate_text
+                                    produce_this = True
+                                else:
+                                    if me.plate_text != last_seen[this_deviceid]:
+                                        last_seen[this_deviceid] = me.plate_text
+                                        produce_this = True
+                                    else:
+                                        print ("skipping duplicate plate '{}'".format(me.plate_text))
+
                                 # write values to kafka
-                                while (True):
+                                while (produce_this):
                                     try:
                                         p.produce(topic, me.to_kafka(writer), 
                                                 #  partition=me.partition, 
