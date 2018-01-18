@@ -161,12 +161,12 @@ if __name__ == '__main__':
     with requests.Session() as s:
         if authorizer is not None:
             s.auth = authorizer
+        s.params.update(params)
         while running:
             try:
-                params['startid'] = _last_offset
                 print ("Sending request to camera server...")
                 try:
-                    r = s.get(url, params=params, timeout=timeout)
+                    r = s.get(url, params={'startid':_last_offset}, timeout=timeout)
                     r.raise_for_status()
                 except (ConnectionError, Timeout, HTTPError) as exc:
                     print("%% camera request timeout or HTTP error: {}".format(exc))
