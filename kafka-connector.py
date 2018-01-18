@@ -108,11 +108,18 @@ if __name__ == '__main__':
  
     if 'Schema' in config:
         schema_path = config['Schema']
-        schema = avro_parser(open(schema_path).read())
+        try:
+            schema = avro_parser(open(schema_path).read())
+        except IOError:
+            print ("could not open schema file '{}', aborting.".format(schema_path))
+            sys.exit()
+        except avro.schema.SchemaParseException as exc:
+            print ("error reading schema file: {}".format(exc))
+            sys.exit()
         writer = avro.io.DatumWriter(schema)
     else:
-        print ("failed to get schema file from configuration")
-        sys.exit()
+        print ("No Avro schema specified.  sending as text.")
+        writer = None
     
     if 'Broker' in config:
         broker = config['Broker']
