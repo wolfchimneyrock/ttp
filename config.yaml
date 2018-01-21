@@ -3,17 +3,16 @@ Topic:      "test"
 URL:        "http://10.34.7.11/command"
 Auth:
     Type:       "Basic" 
-    Source:     "Environment"
+    Source:     "Literal"
     Username:   "VDG_API_USERNAME"
     Password:   "VDG_API_PASSWORD"
 Params:
     command: "getEvents"
     types:   "CarRLicensePlateFound"
-    startid: 0
     limit:   10000
 
-Interval:    5.0
-
+Interval:    30.0
+Timeout:     30.0
 Schema: "movement_event.avsc"
 
 Fields:
