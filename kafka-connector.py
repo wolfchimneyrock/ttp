@@ -17,7 +17,12 @@ except ImportError:
 
 from optparse import OptionParser
 from confluent_kafka import Producer
+
+
 from events import MovementEvent
+import similarity
+
+similarity_threshold = 2
 
 def update_last_offset(n):
     global _last_offset
@@ -165,7 +170,8 @@ if __name__ == '__main__':
         print ("Waiting for messages to send...")
         p.flush()
     running = True
-    last_seen = {}
+    last_seen_lpr = {}
+    last_seen_time = {}
     with requests.Session() as s:
         if authorizer is not None:
             s.auth = authorizer
@@ -204,21 +210,39 @@ if __name__ == '__main__':
                                 me = MovementEvent.from_api(config, this_id, this_value, this_timestamp, this_deviceid)
                                 
                                 produce_this = False
-                                if this_deviceid not in last_seen:
+                                if this_deviceid not in last_seen_lpr:
                                     # this camera has never before seen a plate
-                                    last_seen[this_deviceid] = me.plate_text
+                                    last_seen_lpr[this_deviceid] = {me.plate_text}
+                                    last_seen_time[this_deviceid] = me.timestamp
                                     produce_this = True
                                 else:
-                                    if me.plate_text != last_seen[this_deviceid]:
-                                        last_seen[this_deviceid] = me.plate_text
-                                        produce_this = True
+                                    if me.plate_text not in last_seen_lpr[this_deviceid]:
+                                        matched = False
+                                        for lpr in last_seen_lpr[this_deviceid]:
+                                            if similarity.charSimLevenshtein(lpr, me.plate_text) <= similarity_threshold:
+                                                matched = True
+                                                break
+                                        if matched:
+                                            # similar but not identical to plate already found
+                                            # so we produce this, but keyed on timetamp of first event in set
+                                            last_seen_lpr[this_deviceid].add(me.plate_text)
+                                            produce_this = True
+                                        else:
+                                            # plate is different enough to be a different car
+                                            # flush the set and set a new timestamp
+                                            last_seen_lpr[this_deviceid] = {me.plate_text}
+                                            last_seen_time[this.deviceid] = me.timestamp
+                                            produce_this = True
                                     else:
+                                        # exact duplicate of a plate already in set
+                                        # skip it entirely
                                         print ("skipping duplicate plate '{}'".format(me.plate_text))
 
                                 # write values to kafka
                                 while (produce_this):
                                     try:
                                         p.produce(topic, me.to_kafka(writer), 
+                                                key=me.key(last_seen_time[this.deviceid]),
                                                 #  partition=me.partition, 
                                                 #  timestamp=me.timestamp,
                                                   callback=producer_callback(this_id))

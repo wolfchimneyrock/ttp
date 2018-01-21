@@ -51,4 +51,5 @@ class MovementEvent:
         return bytes_writer.getvalue()
         
 
-
+    def key(self, timestamp):
+        return self.site_id + '.' + self.camera['id'] + '.' + timestamp
