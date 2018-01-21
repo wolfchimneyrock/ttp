@@ -214,6 +214,7 @@ if __name__ == '__main__':
                                     # this camera has never before seen a plate
                                     last_seen_lpr[this_deviceid] = {me.plate_text}
                                     last_seen_time[this_deviceid] = me.timestamp
+                                    print("found plate '{}'".format(me.plate_text))
                                     produce_this = True
                                 else:
                                     if me.plate_text not in last_seen_lpr[this_deviceid]:
@@ -227,22 +228,25 @@ if __name__ == '__main__':
                                             # so we produce this, but keyed on timetamp of first event in set
                                             last_seen_lpr[this_deviceid].add(me.plate_text)
                                             produce_this = True
+                                            print("+ '{}' - {}".format(me.plate_text, this_deviceid))
                                         else:
                                             # plate is different enough to be a different car
                                             # flush the set and set a new timestamp
                                             last_seen_lpr[this_deviceid] = {me.plate_text}
-                                            last_seen_time[this.deviceid] = me.timestamp
+                                            last_seen_time[this_deviceid] = me.timestamp
                                             produce_this = True
+                                            print("found plate '{}' device {}".format(me.plate_text, this_deviceid))
                                     else:
                                         # exact duplicate of a plate already in set
                                         # skip it entirely
-                                        print ("skipping duplicate plate '{}'".format(me.plate_text))
+                                        update_last_offset(this_id)
+                                        print(".")
 
                                 # write values to kafka
                                 while (produce_this):
                                     try:
                                         p.produce(topic, me.to_kafka(writer), 
-                                                key=me.key(last_seen_time[this.deviceid]),
+                                                key=me.key(last_seen_time[this_deviceid]),
                                                 #  partition=me.partition, 
                                                 #  timestamp=me.timestamp,
                                                   callback=producer_callback(this_id))
@@ -265,7 +269,7 @@ if __name__ == '__main__':
                             # we want to clear items when we finish with them to limit memory usage
                             elem.clear()
                 save_last_offset()
-	        print ("processed {} records.".format(this_count))
+                print ("processed {} records.".format(this_count))
                 if this_count < limit:
                     # we didn't hit the limit, which implies there is no more available now - sleep the interval
                     print ("sleeping {} seconds...".format(interval))

@@ -52,4 +52,4 @@ class MovementEvent:
         
 
     def key(self, timestamp):
-        return self.site_id + '.' + self.camera['id'] + '.' + timestamp
+        return str(self.site_id) + '.' + str(self.camera['id']) + '.' + str(timestamp)

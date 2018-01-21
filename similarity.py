@@ -4,6 +4,12 @@ __author__      = "Vee Kaushik"
 
 traceLeven = 0
 
+import sys
+if sys.version_info >= (3, 0):
+    ranger = range
+else:
+    ranger = xrange
+
 scsimtab = {
     ('0', 'O'): .9,
     ('0', 'Q'): .7,  # added becayse LPR confused ALF63Q with ALF630  
@@ -65,15 +71,15 @@ def characterSimilarity(ch1, ch2):
 
     # look up character pair in table
     if (ch1, ch2) in scsimtab:
-	similarity = scsimtab[(ch1, ch2)]
+        similarity = scsimtab[(ch1, ch2)]
     elif (ch2, ch1) in scsimtab:
-	similarity = scsimtab[(ch2, ch1)]
+        similarity = scsimtab[(ch2, ch1)]
     else:
 	# character pair not in table, use default
-	if ch1 == ch2:
-	    similarity = 1
-	else:
-	    similarity = 0
+        if ch1 == ch2:
+           similarity = 1
+        else:
+            similarity = 0
 
     return similarity
 
@@ -100,8 +106,8 @@ def charSimLevenshtein(s, t):
     d = [range(len_t+1)]
     d += [[i] for i in range(1, len_s+1)]
     if traceLeven: print (s, t, d) # diagnostic
-    for i in xrange(0, len_s):
-        for j in xrange(0, len_t):
+    for i in ranger(0, len_s):
+        for j in ranger(0, len_t):
             minCost = effInfinity
             
             # "delete" or "insert" is in terms of changing s into t

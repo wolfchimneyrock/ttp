@@ -3,7 +3,7 @@ Topic:      "test"
 URL:        "http://10.34.7.11/command"
 Auth:
     Type:       "Basic" 
-    Source:     "Literal"
+    Source:     "Environment"
     Username:   "VDG_API_USERNAME"
     Password:   "VDG_API_PASSWORD"
 Params:
